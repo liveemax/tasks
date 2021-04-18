@@ -1,8 +1,6 @@
-const handleAdd=(ref,value,setValue)=>{
-    let container=document.createElement("div")
-    container.innerText=value
-    container.id=value
-    ref.current.appendChild(container)
+const handleAdd=(firstName,setFirstName,value,setValue)=>{
+    firstName.push(value)
+    setFirstName(firstName)
     setValue("")
 }
 export default handleAdd

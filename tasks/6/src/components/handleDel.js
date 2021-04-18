@@ -1,5 +1,9 @@
-const handleDel=(ref,value,setValue)=>{
-    document.getElementById(value)?.remove()
+const handleDel = (addedPerson, setPerson, value, setValue) => {
+    addedPerson = addedPerson.filter((el) => {
+        if (el !== value)
+            return true
+    })
+    setPerson(addedPerson)
     setValue("")
 }
 export default handleDel
